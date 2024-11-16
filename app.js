@@ -17,7 +17,8 @@ app.use("/", indexRouter);
 app.use("/api", apiRouter);
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, async () => {
-  await connectDB();
-  console.log(`Server listening in port ${PORT}`);
+  await connectDB();  // Llamamos a la conexión a la base de datos antes de arrancar el servidor
+  console.log(`Server listening on port ${PORT}`);
 });
